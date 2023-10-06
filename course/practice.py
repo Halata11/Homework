@@ -1,23 +1,8 @@
-letterC = False
-letterO = False
-letterN = False
-word = ""
-cmd = input()
-while cmd != "End":
-    if "a" <= cmd <= "z" or "A" <= cmd <= "Z":
-        if not letterC and (cmd == "c" or cmd == "C"):
-            letterC = True
-        elif not letterO and (cmd == "o" or cmd == "O"):
-            letterO = True
-        elif not letterN and (cmd == "n" or cmd == "N"):
-            letterN = True
-        else:
-            word += cmd
-        if letterC and letterO and letterN:
-            print(word, end=" ")
-            letterC = False
-            letterO = False
-            letterN = False
-            word = ""
-    cmd = input()
-
+string_count = int(input())
+for current_string in range(string_count):
+    string_type = input()
+    if '_' in string_type or '.' in string_type or \
+            ',' in string_type:
+        print(f'{string_type} is not pure!')
+    else:
+        print(f'{string_type} is pure')
